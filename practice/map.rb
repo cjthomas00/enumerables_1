@@ -4,7 +4,9 @@
 
 def capitalize
     names = ["alice", "bob", "charlie"]
-
+        names.map do |name|
+            name.upcase
+        end
     # Your code goes here
 
     # expected return value is ["Alice", "Bob", "Charlie"]
@@ -12,7 +14,9 @@ end
 
 def doubles
     numbers = [1, 2, 3, 4, 5]
-
+    numbers.map do |num|
+        num * 2
+    end
     # Your code goes here
 
     # expected return value is [2, 4, 6, 8, 10]
@@ -20,7 +24,9 @@ end
 
 def squares
     numbers = [1, 2, 3, 4, 5]
-
+    numbers.map do |num|
+        num * num
+    end
     # Your code goes here
 
     # expected return value is [1, 4, 9, 16, 25]
@@ -28,7 +34,9 @@ end
 
 def lengths
     names = ["alice", "bob", "charlie", "david", "eve"]
-
+    names.map do |name|
+        name.length
+    end
     # Your code goes here
 
     # expected return value is [5, 3, 7, 5, 3]
@@ -36,7 +44,9 @@ end
 
 def normalize_zip_codes
     numbers = [234, 10, 9119, 38881]
-
+    numbers.map do |num|
+        num.to_s.rjust(5, '0')   
+    end
     # Your code goes here
 
     # expected return value is ["00234", "00010", "09119", "38881"]
@@ -45,7 +55,9 @@ end
 def backwards
     names = ["alice", "bob", "charlie", "david", "eve"]
 
-    # Your code goes here
+   names.map do |name|
+    name.reverse
+   end
 
     # expected return value is ["ecila", "bob", "eilrahc", "divad", "eve"]
 end
@@ -53,7 +65,9 @@ end
 def words_with_no_vowels
     words = ["green", "sheep", "travel", "least", "boat"]
 
-    # Your code goes here
+    words.map do |word|
+        word.delete('aieou') 
+    end
 
     # expected return value is ["grn", "shp", "trvl", "lst", "bt"]
 end
@@ -61,17 +75,19 @@ end
 def trim_last_letter
     animals = ["dog", "cat", "mouse", "frog", "platypus"]
 
-    # Your code goes here
+    animals.map do |animal|
+        animal.chop
+    end
 
     # expected return value is ["do", "ca", "mous", "fro", "platypu"]
 end
 
 
-# p capitalize
-# p doubles
-# p squares
-# p lengths
-# p normalize_zip_codes
-# p backwards
-# p words_with_no_vowels
-# p trim_last_letter
+ p capitalize
+ p doubles
+ p squares
+ p lengths
+ p normalize_zip_codes
+ p backwards
+ p words_with_no_vowels
+ p trim_last_letter
