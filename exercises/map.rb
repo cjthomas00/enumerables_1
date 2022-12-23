@@ -3,14 +3,16 @@
 
 def kennedy_brothers
     brothers = ["Robert", "Ted", "Joseph", "John"]
-  
-    caps_brothers = []
-  
-    brothers.each do |brother|
-      caps_brothers << brother.upcase
+    brothers.map do |bro|
+      bro.upcase
     end
+    # caps_brothers = []
   
-    caps_brothers
+    # brothers.each do |brother|
+    #   caps_brothers << brother.upcase
+    # end
+  
+    # caps_brothers
 end
 
 p kennedy_brothers
