@@ -4,30 +4,24 @@
 
 def find_first_seven_letter_word # this one is done for you
     words = ["capricious", "berry", "unicorn", "bag", "apple", "festering", "pretzel", "pencil"]
-
     words.find do |word|
-      word.length == 7
+        word.length == 7
     end
-
     # expected return value is "unicorn"
 end
 
 def no_waldo
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
-    found = words.find do |word|
-        word == "waldo"
-      # Your code goes here
-
+    words.find do |word|
+        word.include?("waldo")
     end
-
     # expected return value is nil
 end
 
 def find_waldo
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
-
-    found = words.find do |word|
-        word == "waldo"
+    words.find do |word|
+        word.include?("waldo")
     end
 
     # expected return value is "waldo"
@@ -35,11 +29,9 @@ end
 
 def cannot_find_3_letter_words
     words = ["piglet", "porridge", "bear", "blueberry"]
-
     words.find do |word|
         word.length == 3
     end
-
     # expected return value is nil
 end
 
@@ -48,24 +40,21 @@ def find_13
     numbers.find do |num|
         num == 13
     end
-
     # expected return value is 13
 end
 
 def find_first_even_number
     numbers = [3, 7, 13, 11, 10, 2, 17]
-
     numbers.find do |num|
         num.even?
     end
-
     # expected return value is 10
 end
 
 def find_first_multiple_of_3
     numbers = [2, 8, 9, 27, 24, 5]
     numbers.find do |num|
-     
+     num % 3 == 0
     end
     # Your code goes here
 
@@ -74,7 +63,6 @@ end
 
 def find_first_word_starting_with_q
     words = ["weirdo", "quill", "fast", "quaint", "quitter", "koala"]
-
     words.find do |word|
         word.start_with?("q")
     end
@@ -84,23 +72,17 @@ end
 
 def find_first_word_ending_with_er
     words = ["biggest", "pour", "blight", "finger", "pie", "border"]
-
     words.find do |word|
         word.end_with?("er")
     end
-
     # expected return value is "finger"
 end
 
 def find_first_number_greater_than_20
     numbers = [1, 8, 19, 21, 29, 31, 34]
-
     numbers.find do |num|
-        if num > 20
-            num
-        end
+        num > 20
     end
-
     # expected return value is 21
 end
 

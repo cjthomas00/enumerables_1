@@ -4,16 +4,15 @@
 
 def find_all_even_numbers # done for you 
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    numbers.find_all do |number|
-      number.even?
+    numbers.find_all do |num|
+      num.even?
     end
   end
 
   def find_all_odd_numbers
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-    numbers.find_all do |number|
-      number.odd?
+    numbers.find_all do |numb|
+      numb.odd?
       # Your code goes here
     end
 
@@ -22,7 +21,6 @@ def find_all_even_numbers # done for you
 
   def find_all_words_with_three_letters
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
-
     words.find_all do |word|
       word.length == 3
     end
@@ -32,7 +30,6 @@ def find_all_even_numbers # done for you
 
   def find_all_words_with_more_than_three_letters
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
-
     words.find_all do |word|
       word.length > 3
     end
@@ -41,9 +38,8 @@ def find_all_even_numbers # done for you
 
   def find_all_words_ending_in_e
     words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
-
     words.find_all do |word|
-      word.end_with?('e')
+      word.end_with?("e")
     end
 
     #  expected return value is ["are", "strike", "piece", "warble", "pipe"]
@@ -51,18 +47,16 @@ def find_all_even_numbers # done for you
 
   def find_all_words_ending_in_ing
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
-
     words.find_all do |word|
-      word.end_with?('ing')
+        word.end_with?("ing")
     end
     #  expected return value is ["bring", "singing"]
   end
 
   def find_all_words_containing_e
     words = ["four", "red", "five", "blue", "pizza", "purple"]
-
     words.find_all do |word|
-      word.include?('e')
+      word.include?("e")
     end
 
     #  expected return value is ["red", "five", "blue", "purple"]
@@ -70,36 +64,30 @@ def find_all_even_numbers # done for you
 
   def find_all_dinosaurs
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
-
-    animals.find_all do |word|
-      word.include?('saurus')
+    animals.find_all do |animal|
+      animal.include?("saurus")
     end
-
     #  expected return value is ["tyrannosaurus", "achillesaurus", "qingxiusaurus"]
   end
 
   def find_all_floats
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
-
-    numbers.find_all do |numb|
-        numb.is_a?(Float)
+    numbers.find_all do |num|
+      num.is_a?(Float)
     end
     #  expected return value is [1.4, 3.5, 4.9, 9.1, 8.0]
   end
 
   def find_all_arrays
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
-
     elements.find_all do |element|
       element.is_a?(Array)
     end
-
     #  expected return value is [["dog"], [56, 3, 8]]
   end
 
   def find_all_hashes
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
-
     elements.find_all do |element|
       element.is_a?(Hash)
     end
